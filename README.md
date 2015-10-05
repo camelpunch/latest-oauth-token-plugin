@@ -1,22 +1,22 @@
-# Hello, World! CF CLI plugin
+# Latest OAuth Token CF CLI plugin
 
-A minimal [CF CLI](https://github.com/cloudfoundry/cli) plugin that prints out "Hello, World!".
+A [CF CLI](https://github.com/cloudfoundry/cli) plugin that uses the CLI's AccessToken function to update (in your `~/.cf/config.json`) and print your oauth token.
 
 ## Installation
 
 ```
 go build
-cf install-plugin ./hello-world-plugin
+cf install-plugin ./latest-oauth-token-plugin
 ```
 
 ## Usage
 
 ```
-cf hello-world
+cf latest-oauth-token
 ```
 
 ## Uninstallation
 
 ```
-cf uninstall-plugin HelloWorldPlugin # bask in the asymmetry
+cf uninstall-plugin LatestOauthTokenPlugin
 ```
