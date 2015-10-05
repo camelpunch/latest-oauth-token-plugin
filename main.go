@@ -6,12 +6,12 @@ import (
 	"github.com/cloudfoundry/cli/plugin"
 )
 
-type HelloWorld struct {
+type LatestOauthToken struct {
 }
 
-func (c *HelloWorld) GetMetadata() plugin.PluginMetadata {
+func (c *LatestOauthToken) GetMetadata() plugin.PluginMetadata {
 	return plugin.PluginMetadata{
-		Name: "HelloWorldPlugin",
+		Name: "LatestOauthTokenPlugin",
 		Version: plugin.VersionType{
 			Major: 0,
 			Minor: 0,
@@ -24,20 +24,20 @@ func (c *HelloWorld) GetMetadata() plugin.PluginMetadata {
 		},
 		Commands: []plugin.Command{
 			{
-				Name:     "hello-world",
-				HelpText: "Command to print out \"Hello, World!\"",
+				Name:     "latest-oauth-token",
+				HelpText: "Command to update and print the latest oauth token",
 				UsageDetails: plugin.Usage{
-					Usage: "cf hello-world",
+					Usage: "cf latest-oauth-token",
 				},
 			},
 		},
 	}
 }
 
-func (c *HelloWorld) Run(cliConnection plugin.CliConnection, args []string) {
-	fmt.Println("Hello, World!")
+func (c *LatestOauthToken) Run(cliConnection plugin.CliConnection, args []string) {
+	fmt.Println("This will be your token")
 }
 
 func main() {
-	plugin.Start(new(HelloWorld))
+	plugin.Start(new(LatestOauthToken))
 }
