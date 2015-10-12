@@ -17,7 +17,7 @@ cf install-plugin ./latest-oauth-token-plugin
 cf latest-oauth-token
 ```
 
-You should see changes to your `~/.cf/config.json` each time this command is
+If https://github.com/cloudfoundry/cli/pull/623 has been merged, you should see changes to your `~/.cf/config.json` each time this command is
 run.
 
 ## Uninstallation
