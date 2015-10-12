@@ -35,7 +35,8 @@ func (c *LatestOauthToken) GetMetadata() plugin.PluginMetadata {
 }
 
 func (c *LatestOauthToken) Run(cliConnection plugin.CliConnection, args []string) {
-	fmt.Println("This will be your token")
+	token, _ := cliConnection.AccessToken()
+	fmt.Println(token)
 }
 
 func main() {
